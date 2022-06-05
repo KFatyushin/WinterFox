@@ -1,0 +1,37 @@
+.calculator-value {
+    height: 37px;
+    display: flex;
+    align-items: center;
+    background: #3F4D7D;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+
+    padding: 0 15px;
+
+    &.open {
+        border-radius: 6px 6px 0 6px;
+
+        & .arrow {
+            transform: scaleY(-1);
+        }
+    }
+
+    &__input {
+        width: 100%;
+
+        & input {
+            width: 100%;
+            background: transparent;
+
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+
+        margin-right: 15px;
+    }
+}

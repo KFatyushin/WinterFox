@@ -1,0 +1,49 @@
+.hamburger {
+    display: none;
+
+    cursor: pointer;
+
+    @media (max-width: $medium) {
+        width: 20px;
+        height: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        order: 1;
+
+        margin-left: 19px;
+
+        & div {
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            border-radius: 30px;
+
+            margin-left: auto;
+
+            transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+            transition-duration: 500ms;
+        }
+
+        &.open {
+            justify-content: center;
+
+            z-index: 100;
+
+            & div {
+                width: 100%;
+            }
+            & div:nth-child(1) {
+                transform: rotate(45deg);
+            }
+            & div:nth-child(2) {
+                opacity: 0;
+            }
+            & div:nth-child(3) {
+                transform: rotate(-45deg);
+
+                margin-top: -4px;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.arrow {
+    width: 10px;
+
+    position: relative;
+
+    transition: transform .5s cubic-bezier(.45,-1,.45,1.5);
+
+    &:before,
+    &:after {
+        content: '';
+
+        width: 6px;
+        height: 1px;
+        background: #fff;
+
+        position: absolute;
+    }
+    &:before {
+        left: 0;
+        transform: rotate(50deg);
+    }
+    &:after {
+        right: 0;
+        transform: rotate(-50deg);
+    }
+
+    @media (max-width: $ex-small) {
+        transition: transform .5s;
+    }
+}

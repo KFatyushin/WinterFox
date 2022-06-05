@@ -1,0 +1,56 @@
+.popup-form {
+    width: 100%;
+    max-width: 340px;
+    background: #263045;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+
+    position: relative;
+    padding: 30px;
+    transform: translateY(-100vh);
+
+    transition: transform .7s cubic-bezier(.45,-1,.45,1.5);
+
+    &__title {
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: center;
+
+        margin-bottom: 24px;
+    }
+
+    &__input {
+        width: 100%;
+        display: block;
+        background: #3F4D7D;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+
+        font-size: 14px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.6);
+
+        padding: 8px 15px;
+        margin-bottom: 12px;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        &:last-child {
+            margin-bottom: 16px;
+        }
+    }
+    &__hidden {
+        display: none;
+    }
+
+    &__btn {
+        width: 100%;
+    }
+
+    &__close {
+        top: 14px;
+        right: 14px;
+    }
+}

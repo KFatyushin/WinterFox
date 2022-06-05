@@ -1,0 +1,127 @@
+.contact {
+    padding: 50px 0;
+
+    & .container {
+        position: relative;
+    }
+
+    &__title {
+        margin-bottom: 35px;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+
+        margin-right: 40px;
+
+        & .contact-list__item {
+
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    &__right {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    &__icon-bg {
+        position: absolute;
+        left: 45%;
+        top: -80px;
+
+        & svg {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &__line-bg {
+        position: absolute;
+        right: 0;
+        top: 40px;
+
+        & svg {
+            width: 56px;
+            height: 56px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        padding-top: 40px;
+
+        &__wrap {
+            flex-direction: column;
+        }
+
+        &__left {
+            max-width: initial;
+            flex-direction: initial;
+
+            margin-bottom: 36px;
+
+            & .contact-list__item {
+
+                &:last-child {
+                    display: block;
+                }
+            }
+        }
+
+        &__right {
+            max-width: initial;
+
+            & .contact-list {
+                display: none;
+            }
+        }
+
+        &__icon-bg {
+            left: 60%;
+            top: -95px;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        &__left {
+            flex-direction: column;
+
+            & .contact-list {
+                flex-direction: initial;
+                order: 0;
+
+                &__item {
+
+                    &:last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__right {
+
+            & .contact-list {
+                display: block;
+            }
+        }
+
+        &__icon-bg {
+            left: 83%;
+
+            & svg {
+                width: 16px;
+            }
+        }
+    }
+}

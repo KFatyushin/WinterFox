@@ -1,0 +1,41 @@
+.header {
+
+    & .container {
+        position: relative;
+        z-index: 1000;
+
+        &:before {
+            content: '';
+
+            width: 670px;
+            height: 670px;
+            border: 2px solid #FFFFFF;
+            border-radius: 100%;
+
+            position: absolute;
+            top: -497px;
+            right: -308px;
+            z-index: -1;
+        }
+
+        @media (max-width: 1120px) {
+            &:before {
+                top: -457px;
+                right: -416px;
+            }
+        }
+
+        @media (max-width: $medium) {
+            &:before {
+                top: -473px;
+                right: -367px;
+            }
+        }
+
+        @media (max-width: $small) {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}

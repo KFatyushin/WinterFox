@@ -1,0 +1,38 @@
+.buy-crypto {
+    padding: 100px 0 50px;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+
+        position: relative;
+    }
+
+    &__img {
+        max-width: 449px;
+        min-width: 380px;
+
+        margin: 0 auto;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: $large) {
+        padding: 50px 0 40px;
+    }
+
+    @media (max-width: $ex-small) {
+        &__img {
+            width: 340px;
+
+            position: absolute;
+            top: -127px;
+            right: 100px;
+            transform: translateX(100%);
+
+            z-index: -1;
+        }
+    }
+}

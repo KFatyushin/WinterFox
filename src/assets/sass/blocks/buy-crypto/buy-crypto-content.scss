@@ -1,0 +1,55 @@
+.buy-crypto-content {
+
+    &__item {
+        min-height: 320px;
+        visibility: hidden;
+        opacity: 0;
+
+        position: absolute;
+
+        transition: opacity 1.5s;
+
+        &.active {
+            visibility: initial;
+            opacity: 1;
+            transition: opacity 1.5s;
+
+            position: relative;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 500;
+
+        margin-bottom: 26px;
+    }
+
+    &__desc {
+        max-width: 486px;
+
+        margin-bottom: 32px;
+
+        & p {
+            margin-bottom: 18px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__btn {
+        & .btn {
+            display: inline-block;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        &__title {
+            font-size: 20px;
+
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.slides-arrows {
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    left: 25px;
+    transform: translateY(-50%);
+
+    &__item {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+
+        cursor: pointer;
+
+        & .arrow {
+            width: 12px;
+
+            &:after,
+            &:before{
+                width: 7px;
+            }
+        }
+    }
+
+    &__prev {
+        transform: rotate(90deg);
+    }
+    &__next {
+        transform: rotate(-90deg);
+    }
+
+    @media (max-width: $ex-small) {
+        right: 16px;
+        left: 16px;
+    }
+}

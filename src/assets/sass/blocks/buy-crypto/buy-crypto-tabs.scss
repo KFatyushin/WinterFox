@@ -1,0 +1,16 @@
+.buy-crypto-tabs {
+    margin-right: auto;
+
+    @media (max-width: $large) {
+        margin-right: 40px;
+    }
+
+    @media (max-width: $medium) {
+        min-width: 420px;
+    }
+
+    @media (max-width: $ex-small) {
+        min-width: initial;
+        margin-right: 0;
+    }
+}

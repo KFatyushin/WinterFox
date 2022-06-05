@@ -1,0 +1,33 @@
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+
+    transition: visibility .4s;
+
+    &__overlay {
+        background: rgba(0,0,0,.6);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    &.active {
+        visibility: initial;
+
+        & .popup-form {
+            transform: translateY(0);
+        }
+    }
+}

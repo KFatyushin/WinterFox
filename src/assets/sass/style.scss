@@ -1,0 +1,244 @@
+@import "vars";
+
+/* Fonts */
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.ttf") format("ttf"), url("../fonts/#{$file_name}.eot") format("eot");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+@import "fonts";
+
+/* Default styles */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #151D20;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: .01em;
+
+    margin: 0;
+}
+
+menu, ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+
+p {
+    line-height: 130%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button, input, textarea {
+    border: none;
+
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+
+    padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.site-page {
+    overflow: hidden;
+}
+
+.logo-icon {
+    width: 140px;
+    height: 30px;
+}
+
+.container {
+    max-width: 1230px;
+
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: .02em;
+
+    @media (max-width: $medium) {
+        font-size: 34px;
+    }
+
+    @media (max-width: $small) {
+        font-size: 30px;
+    }
+
+    @media (max-width: $ex-small) {
+        font-size: 24px;
+    }
+}
+
+.quotes-crypto {
+    visibility: hidden;
+}
+
+.ccpw-widget {
+    display: none;
+}
+
+.close {
+    display: flex;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+
+    position: absolute;
+
+    cursor: pointer;
+
+    &:before,
+    &:after {
+        content: '';
+
+        width: 1px;
+        height: 100%;
+        display: block;
+        background: #fff;
+
+        position: relative;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+
+        margin-left: -1px;
+    }
+}
+
+.wpcf7 {
+
+    & p {
+        position: relative;
+
+        & .ajax-loader {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    &-form-control-wrap {
+        display: block;
+    }
+    &-not-valid-tip {
+        position: absolute;
+        bottom: -14px;
+    }
+
+    & .contact {
+        padding: 0;
+    }
+}
+
+/* Blocks */
+// swiper
+@import "vendor/swiper";
+@import "blocks/swiper-pagination";
+@import "blocks/slides-arrows";
+
+// Menu
+@import "blocks/menu";
+
+// BTN
+@import "blocks/btn";
+
+// Arrow
+@import "blocks/arrow";
+
+// Hamburger
+@import "blocks/hamburger";
+
+// Calculator
+@import "blocks/calculator/calculator";
+@import "blocks/calculator/calculator-select";
+@import "blocks/calculator/calculator-select-list";
+@import "blocks/calculator/calculator-value";
+@import "blocks/calculator/calculator-currency";
+
+// Header
+@import "blocks/header/header";
+@import "blocks/header/header-navbar";
+@import "blocks/header/header-menu";
+@import "blocks/header/header-contacts";
+@import "blocks/header/header-lang";
+
+// Intro
+@import "blocks/intro/intro";
+@import "blocks/intro/intro-content";
+@import "blocks/intro/intro-calculator";
+
+// About
+@import "blocks/about/about";
+
+// How Exchanged
+@import "blocks/how-exchanged/how-exchanged";
+@import "blocks/how-exchanged/how-exchanged-list";
+
+// Application
+@import "blocks/application/application";
+
+// Advantage
+@import "blocks/advantage/advantage";
+@import "blocks/advantage/advantage-slides";
+
+// Buy Crypto
+@import "blocks/buy-crypto/buy-crypto";
+@import "blocks/buy-crypto/buy-crypto-top";
+@import "blocks/buy-crypto/buy-crypto-tabs";
+@import "blocks/buy-crypto/buy-crypto-btns";
+@import "blocks/buy-crypto/buy-crypto-content";
+
+// Contact
+@import "blocks/contact/contact";
+@import "blocks/contact/contact-list";
+@import "blocks/contact/contact-form";
+@import "blocks/contact/contact-map";
+
+// Offer
+@import "blocks/offer/offer";
+@import "blocks/offer/offer-inner";
+
+// Popup
+@import "blocks/popup/popup";
+@import "blocks/popup/popup-form";
+
+// Footer
+@import "blocks/footer";

@@ -1,0 +1,39 @@
+.menu {
+    display: flex;
+
+    & li {
+        font-size: 13px;
+        font-weight: 500;
+
+        margin: 0 16px;
+
+        & a {
+            position: relative;
+
+            &:before,
+            &:after {
+                content: '';
+
+                width: 0;
+                height: 1px;
+                background: transparent;
+
+                position: absolute;
+                bottom: -5px;
+
+                transition: width .5s ease, background-color .5s ease;
+            }
+            &:before {
+                right: 50%;
+            }
+            &:after {
+                left: 50%;
+            }
+            &:hover:before,
+            &:hover:after {
+                width: 50%;
+                background: #fff;
+            }
+        }
+    }
+}

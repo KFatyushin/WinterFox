@@ -1,0 +1,43 @@
+.advantage-slides {
+    width: 100%;
+    max-width: 550px;
+    min-width: 460px;
+    background: #161F22;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+
+    padding: 40px 48px 76px;
+    margin: 0 auto;
+    position: relative;
+
+    &__container {
+        max-width: 390px;
+    }
+
+    &__item {
+        text-align: center;
+
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: $medium) {
+        min-width: auto;
+    }
+
+    @media (max-width: $ex-small) {
+        padding:  24px 48px 46px;
+
+        &__title {
+            font-size: 17px;
+
+            margin-bottom: 14px;
+        }
+    }
+}

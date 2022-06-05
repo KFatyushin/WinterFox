@@ -1,0 +1,18 @@
+.buy-crypto-top {
+    margin-bottom: 45px;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: $ex-small) {
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__desc {
+            max-width: 400px;
+            padding-right: 30px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.header-lang {
+
+    & a {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    & input {
+        display: none;
+    }
+
+    & button {
+        background: transparent;
+
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        cursor: pointer;
+    }
+}

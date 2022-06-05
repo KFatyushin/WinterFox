@@ -1,0 +1,34 @@
+.buy-crypto-btns {
+    display: flex;
+
+    margin-bottom: 40px;
+
+    &__item {
+        background: rgba(121, 193, 203, 0.01);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+
+        font-size: 16px;
+        font-weight: 500;
+
+        padding: 7px 10px;
+        margin-right: 10px;
+
+        cursor: pointer;
+        transition: all .5s;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active,
+        &:hover {
+            background: #6163FF;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    @media (max-width: $ex-small) {
+        margin-bottom: 30px;
+    }
+}

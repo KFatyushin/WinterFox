@@ -1,0 +1,21 @@
+.offer {
+    padding: 28px 0 50px;
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: $small) {
+
+        &__title {
+            margin-bottom: 28px;
+        }
+    }
+
+    @media (max-width: $ex-small) {
+
+        &__title {
+            margin-bottom: 26px;
+        }
+    }
+}
